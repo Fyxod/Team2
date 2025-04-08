@@ -93,7 +93,7 @@
   let activeQueue = null;
 
   function increment(id) {
-    // Prevent clicking another card while one is active
+    // One card at a time
     if (activeQueue && activeQueue !== id) {
       return;
     }
@@ -124,15 +124,14 @@
   document.getElementById("signout-btn").addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Example: Clear localStorage/sessionStorage token
+    
     localStorage.removeItem("authToken");
     sessionStorage.removeItem("user");
 
-    // Optionally send a logout request to your backend
-    // fetch("/logout", { method: "POST" })...
+   
 
     // Redirect to login page
-    window.location.href = "index.html"; // or your actual login page
+    window.location.href = "index.html"; 
   });
 </script>
 

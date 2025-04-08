@@ -29,10 +29,6 @@ app.use(session({
 // User model
 const User = require('./models/User');
 
-// ROUTES
-
-
-
 // Login POST
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -65,6 +61,7 @@ app.get('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/index.html');
 });
+
 
 // Root Route
 app.get('/', (req, res) => {
