@@ -590,3 +590,110 @@ border-radius: 8px;
 box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+.filter-tag.active {
+  background-color: var(--highlight);
+}
+
+/* Fade-out animation for deletion */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* New Listing Card Styles */
+.new-listing {
+  background-color: #fff;
+  border: 2px dashed var(--color-2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-listing h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-1);
+}
+
+.new-listing form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-1);
+}
+
+.new-listing form input,
+.new-listing form select {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#postListingBtn {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--color-2);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#postListingBtn:hover {
+  background-color: var(--highlight);
+}
+
+/* Fade-out animation for deletion */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* New Listing Card Styles */
+.new-listing {
+  background-color: #fff;
+  border: 2px dashed var(--color-2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-listing h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-1);
+}
+
+.new-listing form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-1);
+}
+
+.new-listing form input,
+.new-listing form select {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#postListingBtn {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--color-2);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#postListingBtn:hover {
+  background-color: var(--highlight);
+}
