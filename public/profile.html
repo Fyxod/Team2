@@ -27,8 +27,7 @@
       </label>
 
       <a href="profile.html">Profile</a>
-      <a href="settings.html">Settings</a>
-      <a href="#">Sign Out</a>
+      <a href="#" id="signout-btn">Sign Out</a>
     </div>
   </nav>
 
@@ -75,6 +74,20 @@
         alert('Details saved (mock action)');
       }
     });
+
+    document.getElementById("signout-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Example: Clear localStorage/sessionStorage token
+    localStorage.removeItem("authToken");
+    sessionStorage.removeItem("user");
+
+    // Optionally send a logout request to your backend
+    // fetch("/logout", { method: "POST" })...
+
+    // Redirect to login page
+    window.location.href = "index.html"; // or your actual login page
+  });
   </script>
 </body>
 </html>
