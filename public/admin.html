@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Derabuddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Queue Admin Panel</h1>
+  <div id="admin-container"></div>
+
+  <script>
+    async function fetchQueues() {
+      const res = await fetch('/api/queues');
+      const queues = await res.json();
+      const container = document.getElementById('admin-container');
+      container.innerHTML = '';
+
+      queues.forEach(queue => {
+        container.innerHTML += `
+          <div class="card">
+            <h2>${queue.location}</h2>
+            <p>${queue.count} people | Est. Wait: ${queue.count * queue.waitTimePerPerson} min</p>
+            <button onclick="updateQueue('${queue._id}', 'increase')">+</button>
+            <button onclick="updateQueue('${queue._id}', 'decrease')">−</button>
+          </div>`;
+      });
+    }
+
+    async function updateQueue(id, action) {
+      await fetch(`/api/queues/${id}/${action}`, { method: 'POST' });
+      fetchQueues();
+    }
+
+    fetchQueues();
+  </script>
+</body>
+</html>
