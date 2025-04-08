@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/userAuthDB', {
 // Middleware
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.json());
 app.use(session({
   secret: 'secret-key',
   resave: false,
